@@ -20,7 +20,7 @@ public class CategoriaService {
 
     // O @Autowired é usado para injetar automaticamente a dependência do CategoriaRepository na classe CategoriaService.
     @Autowired
-    private final CategoriaRepository repository;
+    private CategoriaRepository repository;
 
     public CategoriaService(CategoriaRepository repository) {
         this.repository = repository;

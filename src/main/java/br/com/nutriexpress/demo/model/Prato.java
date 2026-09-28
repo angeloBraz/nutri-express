@@ -1,16 +1,19 @@
 package br.com.nutriexpress.demo.model;
 
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.math.BigDecimal;
+
 @Entity
+@Table(name = "pratos")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
@@ -23,15 +26,10 @@ public class Prato {
 
     private String nome;
     private String descricao;
-    private Double preco;
+    private BigDecimal valor;
+    private String categoria;
     private Integer calorias;
-    private Boolean disponivel;
-    private Long categoriaId;
-
-    public Prato(String nome, String descricao, Double preco) {
-        this.nome = nome;
-        this.descricao = descricao;
-        this.preco = preco;
-    }
+    private Double quantidade;
+    private String unidadeMedida;
 
 }
